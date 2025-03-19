@@ -22,11 +22,13 @@ export async function run(): Promise<void> {
   try {
     const src_dir: string = core.getInput('src_dir')
     const dmg_name: string = core.getInput('dmg_name')
+    const bg_filepath: string = core.getInput('bg_filepath')
     // Expect to get xxx.app
     const base_name: string = path.basename(src_dir)
     core.debug(`src_dir = ${src_dir} `)
     core.debug(`dmg_name = ${dmg_name} `)
     core.debug(`base_name = ${base_name}`)
+    core.debug(`base_name = ${bg_filepath}`)
 
     core.info(`Installing create-dmg`)
     await exec(`brew install create-dmg`)
@@ -35,7 +37,7 @@ export async function run(): Promise<void> {
     // Log the current timestamp, wait, then log the new timestamp
     core.debug(new Date().toTimeString())
     await exec(
-      `create-dmg --volname "${dmg_name}" --background "bg.svg" --window-pos 200 120 --window-size 660 400 --icon-size 100 --icon ${base_name} 160 185 --app-drop-link 500 185 ${dmg_name}.dmg ${src_dir}`
+      `create-dmg --volname "${dmg_name}" --background "${bg_filepath}" --window-pos 200 120 --window-size 660 400 --icon-size 100 --icon ${base_name} 160 185 --app-drop-link 500 185 ${dmg_name}.dmg ${src_dir}`
     )
     core.info(`Create dmg finished`)
 

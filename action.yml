@@ -17,6 +17,10 @@ inputs:
     description: 'Set the name of the output DMG file.'
     required: true
     default: 'dmg_name'
+  bg_filepath:
+    description: 'Set the filepath to the background image.'
+    required: false
+    default: 'bg.svg'
 
 runs:
   using: node20

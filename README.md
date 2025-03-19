@@ -21,13 +21,16 @@ install and use your application.
 
 - `src_dir`(**Required**): Path of the Application Bundle.
 
+- `bg_filepath`(**Optional**): Path of the background image.
+
 ## Example usage
 
 ```
-uses: L-Super/create-dmg-actions@v1.0.3
+uses: urban233/create-dmg-actions@vX.X.X
 with:
   dmg_name: 'installer'
   src_dir: 'demo.app'
+  bg_filepath: 'bg.svg'
 ```
 
 ## License

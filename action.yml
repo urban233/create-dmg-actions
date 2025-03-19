@@ -19,7 +19,7 @@ inputs:
     default: 'dmg_name'
   bg_filepath:
     description: 'Set the filepath to the background image.'
-    required: false
+    required: true
     default: 'bg.svg'
 
 runs:

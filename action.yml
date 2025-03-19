@@ -1,6 +1,6 @@
-name: 'create macOS dmg'
+name: 'create macOS dmg with custom background'
 description: 'Create dmg on macOS by actions'
-author: 'L-Super'
+author: 'L-Super, urban233'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
